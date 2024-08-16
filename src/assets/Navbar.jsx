@@ -32,7 +32,7 @@ export default function Navbar() {
 
                 <div className='text-6xl '>
                     <Link href='/'>
-                        <img src="/pgrid.svg"
+                        <img src="/Digitech.svg"
                             width={200}
                             height={100}
                             alt="image" />
