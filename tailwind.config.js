@@ -24,8 +24,8 @@ export default {
         lighterGreen:'#106236',
         greyBlack:'#181B38',
         grey:'#fafafa',
-        darkGreen:'#00d3ac',
-        lightGreen:'#acfce3',
+        darkGreen:'#1674a4',
+        lightBlue:'#3bbdd0',
         purpleBlue:'#6945d8',
 
        
