@@ -33,5 +33,5 @@ jobs:
         protocol: ${{ secrets.FTP_PROTOCOL}}
         port: ${{ secrets.FTP_PORT}}
         local-dir: ./dist/
-        server-dir: ./
+        server-dir: /
         timeout: 120000
