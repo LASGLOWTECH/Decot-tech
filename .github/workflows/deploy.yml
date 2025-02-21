@@ -1,49 +1,35 @@
-name: Node.js CI
-
-on:
+on: 
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+    
+name: 🚀 Deploy website on push
 
 jobs:
-  build:
-
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-       node-version: [22.13.1]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-
-  deploy:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Get latest code
+    - name: 🚚 Get latest code
       uses: actions/checkout@v4
 
-    - name: Set up LFTP
-      run: sudo apt-get install -y lftp
+    - name: Use Node.js  22.13.1
 
-    - name: Deploy to FTP
-      env:
-        FTP_HOST: ${{ secrets.FTP_HOST }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME || 'default_username' }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD || 'default_password' }}
-      run: |
-          lftp -d -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R --verbose --only-newer --parallel=10 ./build decot-technology.com/public_html; bye;"
-  
+      uses: actions/setup-node@v2
+      with:
+        node-version: ' 22.13.1'
       
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER}}
+        username: ${{ secrets.FTP_USERNAME}}
+        password: ${{ secrets.MYSECRETPASSWORD}}
+        protocol: ${{ secrets.FTP_PROTOCOL}}
+        local-dir: ./dist
+        port: 1234 # todo replace with your web hosts ftps port
