@@ -41,12 +41,12 @@ export default function Navbar() {
                 </div>
 
 
-                <div className=' hidden  md:flex  flex-col md:flex-row text-darkBlue justify-end'>
+                <div className=' hidden  md:flex  flex-col md:flex-row text-Secondrycolor justify-end'>
                     {navLinks.map((links) => {
                         return (
 
 
-                       <a href ={links.goto} className='text-greyDark hover:border-b-2 hover:border-b-darkestBlue px-6   font-medium tracking-wider text-base ' key={links} >{links.link}</a>
+                       <a href ={links.goto} className='text-greyDark hover:border-b-2 hover:border-b-Primarycolor px-6   font-medium tracking-wider text-base ' key={links} >{links.link}</a>
 
 
                         )
@@ -56,7 +56,7 @@ export default function Navbar() {
                 </div>
 
 
-                <Link href="https:/Contact" ><button className=" hidden md:block text-white  hover:shadow-lg hover:shadow-purple-500/25 bg-gradient-to-r from-darkestBlue  via-darkBlue  to-darkestBlue  hover:text-darkBlue font-medium hover:bg-white rounded-full  w-100  px-2 py-2 ">Join Community</button></Link>
+                <Link href="https:/Contact" ><button className=" hidden md:block text-white  hover:shadow-lg hover:shadow-purple-500/25 bg-gradient-to-r from-Primarycolor  via-Secondarycolor to-Primarycolor hover:text-light font-medium hover:bg-white rounded-full  w-100  px-2 py-2 ">Join Community</button></Link>
 
    
 

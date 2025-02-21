@@ -3,7 +3,7 @@
 
 const Creatives =[
     {id:1,
-Picture:"/hero-image.jpg",
+Picture:"/hero-image1.jpg",
     Title:"Creativity Lives Here", 
     Subtext:"We are skilled at what we do, we give that creative touch to your brand"
 },
