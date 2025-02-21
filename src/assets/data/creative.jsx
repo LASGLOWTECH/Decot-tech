@@ -3,15 +3,15 @@
 
 const Creatives =[
     {id:1,
-Picture:"/hero-image1.jpg",
-    Title:"Creativity Lives Here", 
-    Subtext:"We are skilled at what we do, we give that creative touch to your brand"
+Picture:"/Hero-image0.jpeg",
+    Title:"BUILDING TECHNOLOGIES DIGITAL SOLUTIONS", 
+    Subtext:"We grow together, in our simple uniqueness’"
 },
 
 {id:2,
     Picture:"/woman1.jpg",
-    Title:"A Synergy of Creative Minds", 
-    Subtext:"We are young  and energetic, 'Excellence in profession' is our mantra"
+    Title:"DE-COT TECHNOLOGY", 
+    Subtext:"Building and Digitizing a World of Satisfaction.."
 },
 
 {id:3,

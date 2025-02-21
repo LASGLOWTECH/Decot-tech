@@ -44,52 +44,51 @@ const Carouselitem = () => {
   return (
     <>
 
+{/*
+  Heads up! 👋
 
-      <Carousel responsive={responsive}
-        customTransition="all .5s"
-        transitionDuration={2000}
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        ssr={true} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={3000}
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+*/}
 
-      >
+<section
+  className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat"
+>
+  <div
+    className="absolute   bg-Secondarycolor backdrop-brightness-50  inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+  ></div>
 
+  <div
+    className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+  >
+    <div className="max-w-lg  ltr:sm:text-left rtl:sm:text-right">
+      <h1 className="text-xl md:text-7xl    font-bold tracking-wider text-white">
+      Building Technologies Digital Solutions
 
-        {Creatives.map((creative, index) => {
-          return (
+   
+      </h1>
 
-            <div className='   bg-cover h-[100vh]  bg-center' key={index} data-aos-duration="1500" data-aos="fade-down-right"
-              style=
-              {{
-                backgroundImage: `url(${creative.Picture})`,
-         
-              }}>
+      <p className="pt-4 text-[18px] max-w-md text-white text-center shadow-sm font-normal">
+      Building and Digitizing a World of Satisfaction..
+      </p>
 
-              <div className='overlay relative w-full h-full backdrop-brightness-50 my-6   flex justify-center items-center flex-col '>
+      <div className="mt-8 flex flex-wrap gap-4 text-center">
+        <a
+          href="#"
+          className="block w-full rounded-sm bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
+        >
+          Get Started
+        </a>
 
-                <div className='w-[100px] mb-6 rounded-lg h-[3px] bg-darkGreen' data-aos="slide-right" />
-                <h1 className='text-4xl md:text-7xl  max-width-lg text-center  font-bold tracking-wider text-white ' data-aos-duration="1500" data-aos="zoom-in-down">{creative.Title}</h1>
-                <p className='pt-4 text-[18px] max-w-md text-white text-center shadow-sm font-normal ' data-aos-duration="1500" data-aos="slide-down">{creative.Subtext}</p>
-              <a href="/#about" >  <button className='bg-darkBlue px-6  mt-6 py-3 rounded-md  hover:bg-blue-500 transition duration-500 ease-in-out text-white   text-base text-lighter ' >Read More</button></a>
-         
-              </div>
-
-
-            </div>
-
-
-          )
-
-        })}
-
-
-
-
-      </Carousel>
-
+        <a
+          href="#"
+          className="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow-sm hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

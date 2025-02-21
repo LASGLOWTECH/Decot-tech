@@ -41,7 +41,7 @@ export default function Navbar() {
                 </div>
 
 
-                <div className=' hidden  md:flex  flex-col md:flex-row text-Secondrycolor justify-end'>
+                <div className=' hidden  md:flex  flex-col md:flex-row text-Primarycolor justify-end'>
                     {navLinks.map((links) => {
                         return (
 
@@ -56,7 +56,7 @@ export default function Navbar() {
                 </div>
 
 
-                <Link href="https:/Contact" ><button className=" hidden md:block text-white  hover:shadow-lg hover:shadow-purple-500/25 bg-gradient-to-r from-Primarycolor  via-Secondarycolor to-Primarycolor hover:text-light font-medium hover:bg-white rounded-full  w-100  px-2 py-2 ">Join Community</button></Link>
+                <Link href="https:/Contact" ><button className=" hidden md:block text-white  hover:shadow-lg hover:shadow-Secondary-500/25 bg-gradient-to-r from-Primarycolor  via-Secondarycolor to-Primarycolor hover:text-light font-medium hover:bg-white rounded-lg  w-100  px-4 py-3 ">Get In Touch</button></Link>
 
    
 
@@ -104,3 +104,5 @@ export default function Navbar() {
 
     )
 }
+
+
