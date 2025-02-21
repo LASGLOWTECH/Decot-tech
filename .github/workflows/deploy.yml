@@ -33,4 +33,6 @@ jobs:
         protocol: ${{ secrets.FTP_PROTOCOL}}
         port: ${{ secrets.FTP_PORT}}
         local-dir: ./dist/
+        server-dir: /home/sfzatdvg/public_html/  # Uploads to your website root
+        
        
