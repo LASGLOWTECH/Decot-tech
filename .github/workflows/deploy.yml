@@ -34,4 +34,5 @@ jobs:
         port: ${{ secrets.FTP_PORT}}
         local-dir: ./dist/
         server-dir: public_html/ 
+        exclude: |
         timeout: 120000
