@@ -24,7 +24,7 @@ jobs:
         npm install
         npm run build
     
-    - name:  📂 Sync files to FTP server
+    - name:  📂 Sync files 
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER}}
@@ -33,5 +33,5 @@ jobs:
         protocol: ${{ secrets.FTP_PROTOCOL}}
         port: ${{ secrets.FTP_PORT}}
         local-dir: ./dist/
-
+        server-dir: ./  # Upload directly to the root (public_html)
         timeout: 120000
