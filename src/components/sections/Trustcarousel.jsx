@@ -1,7 +1,7 @@
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Testimony from '../assets/data/Testimonials';
+import Testimony from '../../assets/data/Testimonials';
 import { useEffect, useState } from "react";
 
 import AOS from 'aos';

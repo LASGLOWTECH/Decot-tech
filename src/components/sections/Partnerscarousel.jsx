@@ -1,7 +1,7 @@
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Partner from '../assets/data/Partners';
+import Partner from '../../assets/data/Partners';
 
 import { useEffect } from 'react';
 import AOS from 'aos';

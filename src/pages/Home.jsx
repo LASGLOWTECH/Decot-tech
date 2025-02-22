@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import carousel item componentS
-import Testifiers from '../components/Trustcarousel';
+import Testifiers from '../components/sections/Trustcarousel';
 import Carouselitem from '../components/sections/carousel';
-import AboutUs from '../components/sections/About';
+
 // import Services component
 import Services from '../assets/data/serviceslist';
 
-import { Link } from 'react-router-dom';
+
 // creative list
 
 import Whyus from '../assets/data/whyus';
@@ -21,8 +21,8 @@ import { FcOnlineSupport } from "react-icons/fc";
 import { FaPeopleRobbery } from "react-icons/fa6";
 import { SiWorkplace } from "react-icons/si";
 import { PiDotsThreeOutlineFill } from "react-icons/pi";
-
-import Colab from '../components/Partnerscarousel';
+import AboutUs from '../components/sections/About';
+import Colab from '../components/sections/Partnerscarousel';
 import Contact from '../components/form';
 
 export const Home = () => {
@@ -101,7 +101,7 @@ export const Home = () => {
       </div>
 
 {/* About us */}
-<AboutUs/>
+<AboutUs/> 
 
 
 
