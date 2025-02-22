@@ -5,6 +5,7 @@ import React from 'react'
 import { AiOutlineClose } from "react-icons/ai"
 import {HiMiniBars3BottomRight }from "react-icons/hi2"
 import { BiSolidPhoneCall } from "react-icons/bi";
+import Button from "./Button";
 import { useState } from 'react'
 export default function Navbar() {
 
@@ -56,7 +57,7 @@ export default function Navbar() {
                 </div>
 
 
-                <Link href="https:/Contact" ><button className=" hidden md:block text-white  hover:shadow-lg hover:shadow-Secondary-500/25 bg-gradient-to-r from-Primarycolor  via-Secondarycolor to-Primarycolor hover:text-light font-medium hover:bg-white rounded-lg  w-100  px-4 py-3 ">Get In Touch</button></Link>
+                <Link href="https:/Contact" >  <Button secondary='default'>Get Started</Button></Link>
 
    
 

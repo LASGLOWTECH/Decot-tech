@@ -3,7 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Creatives from '../assets/data/creative';
 import { useEffect} from "react";
-
+import backgroundImage from '../assets/images/Hero-image1.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Button from './Button';
@@ -51,7 +51,10 @@ const Carouselitem = () => {
 */}
 
 <section
-  className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat"
+  className="relative  bg-cover h-[100vh] bg-cover bg-center bg-no-repeat h-screen"
+  style={{
+    backgroundImage: `url(${backgroundImage})`,
+}}
 >
   <div
     className="absolute   bg-darkBlue backdrop-brightness-50  inset-0  bg-gradient-to-l from-transparent to-black h-full w-full"
@@ -62,7 +65,7 @@ const Carouselitem = () => {
   >
     <div className="py-6">
       <h1 className="text-5xl md:text-6xl  leading-tight lg:tracking-wider  lg:max-w-3xl lg:leading-tight font-bold  text-white">
-      Building Technologies <span className='text-Secondrycolor'>Digital Solutions</span>
+      Building Technologies Digital<span className='text-Secondarycolor'> Solutions</span>
 
    
       </h1>
@@ -71,7 +74,7 @@ const Carouselitem = () => {
      Welcome to Decot-Technology,  Where We grow your business with our digital solutions
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-4 text-center">
+      <div className="mt-12 flex flex-wrap gap-4 text-center">
           < a
           href="#"
           
