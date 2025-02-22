@@ -6,7 +6,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import carousel item componentS
 import Testifiers from '../components/Trustcarousel';
-import Carouselitem from '../components/carousel';
+import Carouselitem from '../components/sections/carousel';
+import AboutUs from '../components/sections/About';
 // import Services component
 import Services from '../assets/data/serviceslist';
 
@@ -41,10 +42,12 @@ export const Home = () => {
 
 
       <div className="px-6 md:px-24 shadow-l gap-5 grid grid-cols-1 md:grid-cols-4 mt-6 md:z-10 md:-mt-[50px]">
-        <div className=' flex md:z-10 rounded-2xl  bg-darkBlue items-center p-2 py-12  text-center text-white justify-center flex-col ' data-aos="fade-up-left">
-          <h3 className='font-medium  text-[20px] md:text-3xl px-2 '>
-            YOUR FIRST-CLASS ICT CONSULTANTS
-
+        
+        {/* grid one */}
+        
+        <div className=' flex md:z-10 rounded-2xl   hover:bg-white hover:text-darkBlue bg-darkBlue items-center p-2 py-12  text-center text-white justify-center flex-col ' data-aos="fade-up-left">
+          <h3 className='font-medium  text-lg md:text-2xl px-2 '>
+            We Build and Beautify
           </h3>
 
 
@@ -57,33 +60,28 @@ export const Home = () => {
 
 
 
-        <div className=' flex md:z-10 bg-white shadow-2xl items-center px-2 rounded-2xl justify-center flex-col py-4'>
+        <div className=' flex md:z-10 bg-white shadow-2xl items-center w-auto h-auto px-2 rounded-2xl justify-center flex-col py-4'>
           <FaPeopleRobbery className='fill-darkBlue text-6xl py-2' />
-          <h4 className='font-bold py-2 text-center text-2xl'>
+          <h3 className='font-semibold  text-lg md:text-2xl text-center pt-5 px-2'>
 
-            100% Client
-            Satisfaction
+            We Network with Industries
 
-          </h4>
-          <PiDotsThreeOutlineFill className='fill-darkGreen text-5xl' />
-          <p className='text-base px-2 text-center'>Our unwavering commitment to excellence empowers us to deliver impeccable services,
-            consistently exceeding expectations within every deadline.</p>
+          </h3>
+          <PiDotsThreeOutlineFill className='fill-Secondarycolor text-5xl' />
+
         </div>
 
 
         {/* dgrid Three */}
 
 
-        <div className=' flex md:z-10  bg-white shadow-2xl items-center px-2 rounded-2xl justify-center flex-col py-4'>
-          <SiWorkplace className='fill-darkBlue text-6xl py-2' />
-          <h4 className='font-bold px-4 py-2 text-center text-2xl'>
-
-            6+ Years of Excellence
+        <div className=' flex md:z-10  bg-white hover:bg-darkBlue hover:text-white shadow-2xl items-center px-2 rounded-2xl justify-center flex-col py-4'>
+          <SiWorkplace className='fill-Secondarycolor text-6xl py-2' />
+          <h4 className='font-semibold  text-lg md:text-2xl text-center pt-5 px-2'>
+            We invent and Innovate with Precision
 
           </h4>
-          <PiDotsThreeOutlineFill className='fill-darkGreen text-5xl' />
-          <p className='text-base px-2 text-center'>Distinguished by our relentless pursuit of perfection, we seamlessly provide unparalleled services that redefine industry standards.</p>
-        </div>
+          <PiDotsThreeOutlineFill className='fill-Secondarycolor text-5xl' />        </div>
 
         {/* grid 4 */}
 
@@ -91,17 +89,23 @@ export const Home = () => {
 
 
         <div className=' flex md:z-10 bg-white shadow-2xl items-center px-2 rounded-2xl justify-center flex-col py-4'>
-          <FcOnlineSupport className='fill-darkGreen text-6xl py-2' />
-          <h4 className='font-bold py-2 text-center text-2xl'>
+          <FcOnlineSupport className='fill-darkBlue text-6xl py-2' />
+          <h4 className='font-semibold  text-lg md:text-2xl text-center pt-5 px-2'>
 
-            5-Star Customer Support
-          </h4>
-          <PiDotsThreeOutlineFill className='fill-darkGreen text-5xl' />
-          <p className='text-base px-2 text-center'>At the heart of our company beats a dedication to unmatched customer support, where we stand by our clients at every turn, offering unwavering assistance throughout their journey with us.</p>
+            We Educate         </h4>
+          <PiDotsThreeOutlineFill className='fill-Secondarycolor text-5xl' />
+
         </div>
 
 
       </div>
+
+{/* About us */}
+<AboutUs/>
+
+
+
+
 
 
       {/* A section for Services */}
@@ -118,7 +122,7 @@ export const Home = () => {
 
           {Services.map((service, index) => {
             return (
-              <div className='bg-blue-100 px-4 md:px-8 py-8 flex flex-col  items-center '  data-aos="slide-up"  key={index}>
+              <div className='bg-blue-100 px-4 md:px-8 py-8 flex flex-col  items-center ' data-aos="slide-up" key={index}>
                 <img src={service.Picture} alt='servive-image' className='w-[80px]' />
                 <h4 className='font-medium text-center py-4 text-[20px] px-10 md:px-16 text-black' >{service.Title}</h4>
 
@@ -215,8 +219,8 @@ export const Home = () => {
         </h1>
         <p className='text-grey-500 text-center font-medium p-4 text-2xl '>trust earned and preserved</p>
 
-
-        <Testifiers />
+        {/* 
+        <Testifiers /> */}
 
 
 
