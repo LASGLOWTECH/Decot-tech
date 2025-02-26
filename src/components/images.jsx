@@ -1,15 +1,12 @@
 // images.js
+import React from 'react';
+import Lady1 from '../assets/images/Lady1.jpeg';
+import Heroimage from '../assets/images/Hero-image1.jpg';
 
-import image1 from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image3.jpg';
-import image4 from '../assets/images/image4.jpg';
 
 
 export {
-    image1,
-    image2,
-    image3,
-    image4,
+Lady1,
+  Heroimage 
     // Continue exporting all images
 };

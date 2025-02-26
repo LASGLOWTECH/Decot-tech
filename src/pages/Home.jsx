@@ -101,7 +101,7 @@ export const Home = () => {
       </div>
 
 {/* About us */}
-<AboutUs/> 
+<AboutUs /> 
 
 
 
@@ -147,7 +147,7 @@ export const Home = () => {
 
 
       {/* Our Stive section */}
-      <section className='  px-6 py-6 md:p-24' id='about'>
+      <section className='  px-6 py-6 md:p-24' id='abou'>
 
         <div className='grid gap-2 py-6 mt-6 grid-cols-1 md:grid-cols-2'>
 

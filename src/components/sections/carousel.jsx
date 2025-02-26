@@ -1,9 +1,9 @@
 
-import Carousel from 'react-multi-carousel';
+// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Creatives from '../../assets/data/creative';
 import { useEffect } from "react";
-// import Heroimage from '../assets/images/Hero-image1.jpg';
+import { Heroimage } from '../images';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Button from '../Button';
