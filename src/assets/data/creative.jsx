@@ -1,22 +1,25 @@
-
+import React from 'react';
+import { Synergy, Backdrop, Heroimage } from '../../components/images';
 
 
 const Creatives =[
     {id:1,
-Picture:"/Hero-image0.jpeg",
-    Title:"BUILDING TECHNOLOGIES DIGITAL SOLUTIONS", 
-    Subtext:"We grow together, in our simple uniqueness’"
+Picture: Heroimage,
+    Title:"Building Technologies Digital ",
+    Highlight:"Solutions",
+    Subtext:" Welcome to Decot-Technology,  Where We grow your business with our digital solutions"
 },
 
 {id:2,
-    Picture:"/woman1.jpg",
-    Title:"DE-COT TECHNOLOGY", 
+    Picture:Backdrop,
+    Title:"DE-COT TECHNOLOGY",
     Subtext:"Building and Digitizing a World of Satisfaction.."
 },
 
 {id:3,
-    Picture:"/woman2.jpg",
-    Title:"First-Class ICT Consultants", 
+    Picture:Synergy,
+    Title:"First-Class ICT ", 
+    Highlight:"Consultants",
     Subtext:"We are your reliable partner, we take your business to its peak."
 },
 ]
