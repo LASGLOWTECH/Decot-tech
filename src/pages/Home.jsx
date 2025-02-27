@@ -9,7 +9,7 @@ import Testifiers from '../components/sections/Trustcarousel';
 import Carouselitem from '../components/sections/carousel';
 
 // import Services component
-import Ourservices from '../components/sections/Ourservices';
+import Services from '../assets/data/serviceslist';
 
 
 // creative list
