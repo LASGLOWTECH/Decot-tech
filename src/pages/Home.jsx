@@ -9,7 +9,7 @@ import Testifiers from '../components/sections/Trustcarousel';
 import Carouselitem from '../components/sections/carousel';
 
 // import Services component
-import Services from '../assets/data/serviceslist';
+import Ourservices from '../components/sections/Ourservices';
 
 
 // creative list
@@ -24,6 +24,7 @@ import { PiDotsThreeOutlineFill } from "react-icons/pi";
 import AboutUs from '../components/sections/About';
 import Colab from '../components/sections/Partnerscarousel';
 import Contact from '../components/form';
+import Ourservices from '../components/sections/Ourservices';
 
 export const Home = () => {
 
@@ -104,7 +105,7 @@ export const Home = () => {
 <AboutUs /> 
 
 
-
+<Ourservices /> 
 
 
 

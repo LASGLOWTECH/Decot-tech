@@ -1,63 +1,77 @@
 
- const Services =[
-    {id:1,
-Picture:"/app-development.png",
-    Title:"Software Development", 
-   
-},
+const Services = [
+    {
+        id: 1,
+        Picture: "/app-development.png",
+        Title: "Files/Document Management Services (PDMS)",
+        subtext: "DE-COT TECHNOLOGY specializes in organizing, storing, and managing physical and digital documents efficiently. This service ensures secure and easy access to important files while improving workflow."
 
-{id:2,
-    Picture:"/app-settings.png",
-    Title:"Mobile App Development", 
-   
-},
+    },
 
-{id:3,
-    Picture:"/coding.png",
-    Title:"Website Development", 
- 
-},
-{id:4,
-    Picture:"/figma.png",
-    Title:"Product Design", 
- 
-},
+    {
+        id: 2,
+        Picture: "/app-settings.png",
+        Title: "Digital Records/Data and Information Management Services (EDMS)",
+        subtext: "Providing advanced electronic document management systems, DE-COT TECHNOLOGY ensures secure storage, retrieval, and sharing of digital records and data. This service streamlines business processes and enhances productivity"
+    },
 
-{id:5,
-    Picture:"/digital-marketing.png",
-    Title:"Digital Marketing", 
- 
-},
+    {
+        id: 3,
+        Picture: "/coding.png",
+        Title: "Mechanical / Electrical Installations and Maintenance Services",
+        subtext: "This service includes installation and " +
+            "regular maintenance and repairs of " +
+            "mechanical and electrical systems such " +
+            "as HVAC, wiring, solar/inverter and " +
+            "industrial machinery. DE-COT TECHNOLOGY ensures safety and " +
+            "efficiency in operations."
+    },
+    {
+        id: 4,
+        Picture: "/figma.png",
+        Title: "Household Interior Fittings and Decoration/Building materials",
+        subtext: "DE-COT TECHNOLOGY specializes in installing, organizing, setting up household fittings, also plumbing installation and services, roofing and iron rail services. DE-COT provides her household fittings and building materials for her clients ensuring that quality and high standard facilities are deployed for efficiency. This service ensures guarantee with low maintenance cost."
+    },
 
-{id:6,
-    Picture:"/animation.png",
-    Title:"Motion Graphics & Video Editing", 
- 
-},
+    {
+        id: 5,
+        Picture: "/digital-marketing.png",
+        Title: "Mechanical Installations, Repairs and Maintenance Services",
+        subtext: "DE-COT installs, and service tractors, heavy duty equipment and high marcheneries for construction companies and organisations. \n\n" +
+            "DE-COT supplies, installs and services Techmobile and lectriever shelfs and racks for organisations and data centres"
+    },
 
-{id:7,
-    Picture:"/vector.png",
-    Title:"Graphics Design", 
- 
-},
+    {
+        id: 6,
+        Picture: "/animation.png",
+        Title: "General ICT Services",
+subtext: "This service includes network installations,system setup, administration and maintenance, data security and solution." +
+"DECOT-TECHNOLOGY ensures high level of ICT services to her client. including training,workshop and consultancy."
+    },
 
-{id:8,
-    Picture:"/onboarding.png",
-    Title:"Corporate Training", 
- 
-},
+    {
+        id: 7,
+        Picture: "/vector.png",
+        Title: "Software Development and Deployment",
+        subtext: "DE-COT TECHNOLOGY develops customized software solutions, from web apps to enterprise systems, and cctv, designed to meet unique business" +
+"requirements. Deployment and support services are included."
+
+    },
+
+    {
+        id: 8,
+        Picture: "/onboarding.png",
+        Title: "Training and Workshop Services",
+        subtext: "DE-COT TECHNOLOGY organizes training and workshops to upskill professionals in various fields," +
+"including technology, management, and technical services"
+    },
 
 
-{id:8,
-    Picture:"/consultant.png",
-    Title:"Consulting", 
- 
-},
 
 
 
 ]
- 
+
 
 export default Services;
 
