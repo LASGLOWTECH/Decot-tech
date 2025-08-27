@@ -13,7 +13,7 @@ Picture: Heroimage,
 {id:2,
     Picture:Backdrop,
     Title:"DE-COT TECHNOLOGY",
-    Subtext:"Building and Digitizing a World of Satisfaction.."
+    Subtext:"De-cot Technology is established company that is engaged in advanced digital solutions. We have served various clients from various cities. We deliver results that exceed our clients' expectations, and we are committed to providing the highest level of customer service."
 },
 
 {id:3,

@@ -27,12 +27,12 @@ export default function Footer() {
         <div className='contact  md:mt-0 mt-6 flex flex-col'>
           <h3 className='text-darkBlue font-bold text-2xl'>Navigation</h3>
 
-          <div className='flex-row my-4 '>
-            <p className='text-lg'>Home</p>
-            <p className='text-lg'>Services</p>
-            <p className='text-lg'>About</p>
-            <p className='text-lg'>Training</p>
-           <a href="/https://wa.me/2349031821590" target="_blank" ><button className="text-base   rounded-md px-6  mt-3 py-3  text-white fonr-medium my-3 bg-blue-600 " value="Submit">Contact Us</button></a>
+         <div className='flex flex-col  my-4 '>
+         <a href='/'   className='text-lg'>Home</a>
+         <a href='/#Services' className='text-lg'>Services</a>
+         <a href='/#about' className='text-lg'>About</a>
+         <a href="/https://wa.me/2349031821590" target="_blank" ><button className="text-base   rounded-md px-6  mt-3 py-3  text-white fonr-medium my-3 bg-blue-600 " value="Submit">Contact Us</button></a>
+
 
 
             <h3 className='text-darkBlue font-bold py-3 text-lg'>Quick Links</h3>

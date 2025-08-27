@@ -57,9 +57,8 @@ export default function Navbar() {
                 </div>
 
 
-                <Link href="https:/Contact" className="hidden md:flex" >  <Button secondary='default'>Get Started</Button></Link>
+                <a href="/#contact" className="hidden md:flex" >  <Button secondary='default'>Get Started</Button></a>
 
-   
 
                 {!show ?  (< div className=' flex items-center   justify-center md:hidden'><HiMiniBars3BottomRight className="font-extrabold text-2xl  text-darkestBlue transition  ease-in duration-500 rounded-4xl w-10 h-10 " onClick={handleShow} /></div>) : ( < div className=' flex items-center     justify-center md:hidden'><AiOutlineClose className="font-bold text-lg  text-darkestBlue transition duration-500  rounded-4xl  w-8 h-8 " onClick={handleClose} /></div>)}
 
