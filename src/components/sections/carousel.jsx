@@ -4,7 +4,7 @@ import Creatives from '../../assets/data/creative';
 import useAOS from '../../hooks/useAos';
 import 'aos/dist/aos.css';
 import Button from '../Button';
-import { Link } from 'react-router-dom';
+
 const Carouselitem = () => {
   const refreshAOS = useAOS(); // Use the custom hook
 
@@ -52,10 +52,10 @@ const Carouselitem = () => {
           data-aos-duration="1000"
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-darkBlue via-darkBlue/95 to-dark opacity-95"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-darkBlue via-darkBlue/95 to-dark opacity-95 z-0"></div>
 
           {/* Content */}
-          <div className="relative mx-auto max-w-screen-xl px-6 py-32 lg:flex lg:h-screen lg:items-center lg:px-20">
+          <div className="relative z-10 mx-auto max-w-screen-xl px-6 py-32 lg:flex lg:h-screen lg:items-center lg:px-20">
             <div className="py-6">
               {/* Hero Heading */}
               <h1
@@ -74,16 +74,15 @@ const Carouselitem = () => {
 
               {/* CTA Buttons */}
               <div className="mt-10 flex flex-wrap gap-4">
-                  <a href="#contact" className="flex">
-    <Button variant="default" size="lg">Get Started</Button>
-  </a>
-  <a href="#about">
-    <Button variant="primary" size="lg">Learn More</Button>
-  </a>
-
+                <a href="#contact" className="flex">
+                  <Button variant="default" size="lg">Get Started</Button>
+                </a>
+                <a href="#about">
+                  <Button variant="primary" size="lg">Learn More</Button>
+                </a>
               </div>
             </div>
-           </div>
+          </div>
         </section>
       ))}   
     </Carousel>
