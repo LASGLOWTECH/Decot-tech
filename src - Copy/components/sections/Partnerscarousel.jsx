@@ -60,16 +60,18 @@ const Colab = () => {
         {Partner.map((partners, index) => {
           return (
 
-            <div className='  flex items-center justify-center   py-4 ' key={index} 
+            <div className='  flex items-center justify-between   flex-col   ' key={index} 
             >
 
-  
+<div className='   bg-grey shadow-lg rounded-md   p-6 ' key={index} 
+            >
 
-    <img src=  {partners.Picture} alt='ourthrive-image ' className='  p-y w-100' />
 
+    <img src=  {partners.Picture} alt='ourthrive-image ' className='   w-100' />
 
+<p className='text-grey-500 text-center font-medium pt-3  text-lg '>{partners.subtext}</p>
    
-            
+            </div>
 
           </div>
 

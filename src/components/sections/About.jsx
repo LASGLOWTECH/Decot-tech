@@ -26,19 +26,29 @@ const AboutUs = () => {
 
         {/* Text Content */}
         
-          <h3 className=" tracking-wider md:leading-10 bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor max-w-xl  bg-size-200 animate-gradient text-2xl md:text-3xl lg:text-3xl font-bold">
+          <h3 className=" md:leading-10 bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor max-w-xl  bg-size-200 animate-gradient text-2xl md:text-4xl lg:text-4xl font-semibold">
             Excellence in Information, Communication
             and <span className='text-darkBlue'> Technology</span>
           </h3>
 
-          <p className="max-w-md md:max-w-xl    text-slate-500 text-sm md:text-base lg:text-lg mb-5  md:mb-5 lg:mb-5 lg:mt-5 ">
-            Established with the goal to lead in the world of Technology, where day to day
-            activities strives with ease.
-            It is a dream of 10years playing today and with all her well experienced engineers, 
-            and System experts, data/records professionals, innovators, passionate partners and entrepreneurs.
-            DE-COT Technology and Digital Solutions Ltd was Founded to solve all problems of
-            Technology, develop Solutions and build worlds of satisfaction to all her clients.
-          </p>
+          <p className="max-w-3xl text-slate-500 text-sm md:text-base lg:text-lg mb-5 lg:mt-5 leading-relaxed mx-aut">
+  Established with the goal of leading in the world of technology, where daily 
+  activities are simplified with ease, DE-COT Technology and Digital Solutions Ltd 
+  embodies innovation and excellence. 
+
+  <br /><br />
+  What began as a ten-year dream is now a reality, driven by experienced engineers, 
+  IT and system experts, data and records professionals, innovators, passionate 
+  partners, and entrepreneurs. 
+
+  <br /><br />
+  Founded in 2024 by C.O. Brian, DE-COT LTD brings together a network of experts 
+  and companies under one umbrella with a shared mission — to solve technological 
+  challenges, develop cutting-edge solutions, build human capacity, create wealth 
+  opportunities, deliver client satisfaction, and transform environments into 
+  better places for mankind.
+</p>
+
 
           <Button primary='default' className='flex flex-row ' >Learn More
             <BiArrowToRight className="w-auto h-5 transition-transform duration-300 group-hover:translate-x-1" />

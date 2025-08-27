@@ -42,12 +42,12 @@ export default function Navbar() {
                 </div>
 
 
-                <div className=' hidden  md:flex  flex-col md:flex-row text-Primarycolor justify-end'>
+                <div className=' hidden  md:flex  md:border-2  p-3 rounded-full flex-col md:flex-row text-Primarycolor justify-end'>
                     {navLinks.map((links) => {
                         return (
 
 
-                       <a href ={links.goto} className='text-greyDark hover:border-b-2 hover:border-b-Primarycolor px-6   font-medium tracking-wider text-base ' key={links} >{links.link}</a>
+                       <a href ={links.goto} className='text-greyDark hover:border-b-2 hover:border-b-Primarycolor px-3  font-medium tracking-wider text-base ' key={links} >{links.link}</a>
 
 
                         )
@@ -57,7 +57,7 @@ export default function Navbar() {
                 </div>
 
 
-                <Link href="https:/Contact" >  <Button secondary='default'>Get Started</Button></Link>
+                <Link href="https:/Contact" className="hidden md:flex" >  <Button secondary='default'>Get Started</Button></Link>
 
    
 

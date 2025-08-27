@@ -49,23 +49,23 @@ export default function Footer() {
 
         <div className='contact md:mt-0 mt-12 flex flex-col'>
 
-          <div className='flex flex-row  '>
+          <div className='flex flex-row  items-center '>
           
           
       
-              <img src="/jvec_logo.png"
+            < img src="/Digitech.svg"
                 width={60}
                 height={60}
                 alt="image" />
 
            
-            <h3 className='text-darkBlue font-bold  text-2xl'>JVEC Solutions</h3>
+            <h3 className='text-darkBlue font-medium text-2xl'>Decot-Tech</h3>
            
 
 
           </div>
 
-          <p className='font-thin text-base pt-3 '>At JVEC, we believe that whatever is worth doing, is worth doing well.
+          <p className='font-normal text-base pt-3 '>At Decot Tech, we believe that whatever is worth doing, is worth doing well.
 
             This mindset is responsible for our conscientious approach to achieving quality service delivery. Over the years, we have built our brand on the foundation of excellence.</p>
 
@@ -90,7 +90,7 @@ export default function Footer() {
           <div className="flex flex-row  justify-start items-center">
             <span className=" rounded-[100%]   my-3   bg-orangeRed  text-3xl">< BsTelephone className="p-1 text-darkBlue" /></span>
 
-            <p className="text-xl pl-6 text-black"> +234-8100-100-489</p>
+            <p className="text-xl pl-6 text-black"> +234 703-464-5658</p>
           </div>
 
 
@@ -100,7 +100,7 @@ export default function Footer() {
 
             <span className=" rounded-[100%]   my-3  bg-orangeRed  text-3xl">   < BiEnvelope className="p-1 text-darkBlue" /></span>
 
-            <p className="text-xl pl-6 text-black">hello@jvecsolutions.com </p>
+            <p className="text-xl pl-6 text-black">info@decot-technology.com </p>
 
           </div>
 
@@ -108,13 +108,13 @@ export default function Footer() {
           <div className="flex flex-row  items-center">
             <span className=" rounded-[100%]   my-3  mbg-orangeRed  text-3xl">< BsWhatsapp className="p-1 text-darkBlue" /></span>
 
-            <p className="text-lg pl-6 text-black"> +234-903-577-8224</p>
+            <p className="text-lg pl-6 text-black"> +234-7034645658</p>
           </div>
 
           <div className="flex flex-row justify-left items-center pt-3">
 
             <span className=" rounded-[100%]    bg-orangeRed  text-black text-4xl">    <MdLocationOn className=" p-1 fill-darkBlue " /></span>
-            <p className="text-lg pl-6  text-black ">12 Rev. Ogunbiyi Street, Off Oba Akinjobi, Ikeja GRA, Lagos, Nigeria.</p>
+            <p className="text-lg pl-6  text-black "> HQ, Milliotary Pension Board , <br></br>  Block 51, Shop NoS54 Gudu Market Abuja,</p>
           </div>
 
 
@@ -139,7 +139,7 @@ export default function Footer() {
       <div className='flex items-center my-10 md:flex-row md:space-x-36 justify-center flex-col '>
 
         <div className="flex flex-col justify-between row  md:flex-row">
-          <p className=" text-center md:text-left font-lighter text-base text-black py-2">  &copy; Copyright <span className="  text-black">{newDay} </span> JVEC Solutions </p>
+          <p className=" text-center md:text-left font-lighter text-base text-black py-2">  &copy; Copyright <span className="  text-black">{newDay} </span> DECOT- TECH </p>
 
         </div>
 

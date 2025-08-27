@@ -1,131 +1,170 @@
-import React from "react";
-import { useState } from "react";
-
+import React, { useState } from "react";
+import { Lady1 } from "../components/images";
 
 function Contact() {
-  const [result, setResult] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const onSubmit = async (event) => {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    setLoading(true);
+    setStatus("");
 
-    formData.append("access_key", "ca199daf-1a7c-45f0-9adf-b3fda752eb10");
+    const data = new FormData();
+    data.append("access_key", "ca199daf-1a7c-45f0-9adf-b3fda752eb10");
+    Object.entries(formData).forEach(([key, value]) => data.append(key, value));
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+      const json = await res.json();
 
-    if (res.success) {
-      console.log("Success", res);
-      setResult(res.message);
-    } else {
-      console.log("Error", res);
-      setResult(res.message);
+      if (json.success) {
+        setStatus("✅ Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus("⚠️ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("❌ Error sending message. Try again later.");
     }
+
+    setLoading(false);
   };
 
   return (
-    <div className="App ">
+    <section
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${Lady1})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/90" />
 
-<section className='bg-cover bg-[url(/backfixedimg.png)]  md:bg-fixed bg-center '  >
+      <div className="relative z-10 container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        {/* Left side */}
+        <div className="text-center md:text-left space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            Contact <span className="text-Secondarycolor">Us</span>
+          </h1>
+          <p className="text-gray-200 text-base leading-relaxed md:max-w-md mx-auto md:mx-0">
+            We’d love to hear from you! Whether you have a question about our
+            services, need support, or simply want to connect, our team is here
+            to help. Reach out through the form below, and we’ll get back to you
+            as soon as possible.
+          </p>
+          <div className="w-24 h-1 bg-Secondarycolor mx-auto md:mx-0"></div>
+        </div>
 
-<div className='py-8 px-6  overlay relative w-full h-full backdrop-brightness-50 flex justify-center items-center flex-col'>
-             
+        {/* Right side - Contact form */}
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-lg space-y-4"
+        >
+          {/* Name fields */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              name="firstName"
+              type="text"
+              placeholder="First name"
+              value={formData.firstName}
+              onChange={handleChange}
+              className="p-3 bg-[#F6F5FA] border border-gray-200 focus:ring-2 focus:ring-Primarycolor rounded-md"
+              required
+            />
+            <input
+              name="lastName"
+              type="text"
+              placeholder="Last name"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="p-3 bg-[#F6F5FA] border border-gray-200 focus:ring-2 focus:ring-Primarycolor rounded-md"
+              required
+            />
+          </div>
 
-<form className=" flex flex-col justify-center md:w-auto w-full  px-6 md:px-20  bg-opacity-50 rounded-2xl bg-darkBlue shadow-lg " onSubmit={onSubmit}>
+          {/* Email */}
+          <input
+            name="email"
+            type="email"
+            placeholder="Enter email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-3 bg-[#F6F5FA] border border-gray-200 focus:ring-2 focus:ring-Primarycolor rounded-md"
+            required
+          />
 
-{/* Name form */}
-<div className="email-send flex justify-beween flex-col ">
+          {/* Subject */}
+          <input
+            name="subject"
+            type="text"
+            placeholder="Enter subject"
+            value={formData.subject}
+            onChange={handleChange}
+            className="w-full p-3 bg-[#F6F5FA] border border-gray-200 focus:ring-2 focus:ring-Primarycolor rounded-md"
+            required
+          />
 
-  <label className="pt-3 pb-2   text-white text-lg font-medium " for="text">Name<sup className="text-red-500">*</sup></label>
+          {/* Message */}
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Type your message..."
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full p-3 bg-[#F6F5FA] border border-gray-200 focus:ring-2 focus:ring-Primarycolor rounded-md"
+            required
+          ></textarea>
 
-  <div className="email-send flex  flex-col md:flex-row ">
-<div className="flex flex-col">
-<input type="text" name="name"
-      className="ps-5  border border-b-darkGreen shadow-md border-double py-2 mt-2 w-full text-base  "
-      required placeholder="John" />
+          {/* Submit button */}
+          <button
+            type="submit"
+            className="w-full text-white px-6 py-3 bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor rounded-md font-medium shadow-md transition-all"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
 
-    <p className="text-white pt-3 ">first</p>
-</div>
-    
-
-<div className="flex  md:pl-3 flex-col">
-<input type="text" name="name"
-      className="ps-5  border border-b-darkGreen shadow-md border-double py-2 mt-2 w-full text-base  "
-      required placeholder="Doe" />
-    <p className="text-white pt-3 ">Last</p>
-
-</div>
-    
-
-  </div>
-
-
-</div>
-
-
-{/* email form */}
-<div className="email-send flex  flex-col ">
-
-  <label className="pt-3 pb-2 text-white text-lg font-medium  " for="text">Email<sup className="text-red-600">*</sup></label>
-
-  <input type="email" name="email"
-    className="ps-5  border border-b-darkGreen shadow-md border-double py-2 mt-2 w-full text-base  "
-    required placeholder="doe@company.com" />
-
-
-</div>
-
-
-{/* phone form */}
-
-<div className="email-send flex  flex-col ">
-
-  <label className="pt-3 pb-2  text-white text-lg font-medium " for="text">Phone Number<sup className="text-red-600">*</sup></label>
-
-  <input type="number" name="phone"
-    className="ps-5  border border-b-darkGreen shadow-md border-double py-2 mt-2 w-full text-base "
-    required placeholder="09031821590" />
-
-
-</div>
-
-{/* message form */}
-
-<div className="email-send flex  flex-col ">
-
-  <label className="pt-3 pb-2  text-white text-lg font-medium " for="text">Comment or Message<sup className="text-red-600">*</sup></label>
-
-  <textarea className="w-full h-[200px]   text-gray-400 ps-5 py-5  border border-b-darkGreen shadow-md border-double text-base"
-    name="message"
-    placeholder="Type your message here" cols="6"
-    rows="3"></textarea>
-
-
-</div>
-
-
-<div className="submit flex  flex-col justify-start ">
-<input type="submit" className="text-lg text-white flex place-self-start rounded-md px-16 py-2  my-3 bg-blue-600" value="Submit"/>
-
-</div>
-
-
-
-</form>
-                
-              </div>
-</section>
-
-
-
-      <p className=" text-base text-green-500 ps-5 py-2">{result} </p>
-
-    </div>
+          {/* Status message */}
+          {status && (
+            <p
+              className={`mt-2 text-sm text-center font-medium ${
+                status.includes("✅")
+                  ? "text-green-600"
+                  : status.includes("⚠️") || status.includes("❌")
+                  ? "text-red-600"
+                  : "text-gray-600"
+              }`}
+            >
+              {status}
+            </p>
+          )}
+        </form>
+      </div>
+    </section>
   );
 }
 
 export default Contact;
-
